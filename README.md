@@ -29,7 +29,12 @@ using lightweight machine learning and designed impact metrics.
 - PTI (Physical Threat Index)
 
 ## 4. Key Observations
-(leave blank for now)
+- Entertainment headlines show higher volatility (std ≈ 9.75) than environment (std ≈ 3.39).
+- Entertainment volume spikes concentrated around event-driven days (Feb 27 – Mar 1).
+- Environment headlines show more question-based framing (9% vs 5%).
+- TF-IDF model significantly outperformed basic feature model (82% vs 58% accuracy).
+- PTI scores were consistently higher for environment domain.
+- Attention volume and PTI do not appear proportionally aligned.
 
 ## 5. Next Direction
 Divergence Layer (Attention vs Impact)
