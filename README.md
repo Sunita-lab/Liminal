@@ -1,7 +1,11 @@
 # Liminal
 
 ## 1. Core Idea
-Short description here (2–3 lines only)
+Liminal is an experimental system to analyze how public attention distributes across domains, 
+and whether that attention aligns with structural indicators of real-world impact.
+
+It studies patterns of amplification, neglect, and temporal spikes 
+using lightweight machine learning and designed impact metrics.
 
 ## 2. Dataset
 - 200 headlines
