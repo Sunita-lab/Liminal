@@ -1,40 +1,89 @@
-# Liminal
+# Liminal — Attention vs Impact Analysis
 
-## 1. Core Idea
-Liminal is an experimental system to analyze how public attention distributes across domains, 
-and whether that attention aligns with structural indicators of real-world impact.
+## Core Question
 
-It studies patterns of amplification, neglect, and temporal spikes 
-using lightweight machine learning and designed impact metrics.
+Do attention patterns reflect real-world impact, or distort it?
 
-## 2. Dataset
-- 200 headlines
-- 2 domains: environment & entertainment
-- Time window: 15 Feb 2026 – 1 Mar 2026
-- 33 sources
+---
 
-## 3. Week 1 Work
+## Overview
+
+Liminal analyzes how public attention distributes across domains, and whether it aligns with structural indicators of real-world impact.
+
+The study compares two domains:
+
+- **Environment** — higher real-world consequences  
+- **Entertainment** — higher public attention  
+
+---
+
+## Dataset
+
+- 200 headlines  
+- 2 domains (environment, entertainment)  
+- Time window: Feb 15 – Mar 1, 2026  
+- 33 sources  
+
+---
+
+## Approach
+
+The analysis was structured across three layers:
 
 ### Observational Layer
-- Daily volume
-- Volatility & burstiness
-- Vocabulary comparison
-- Sentiment analysis
+- Daily volume  
+- Volatility (standard deviation)  
+- Burstiness (attention spikes)  
+- Sentiment patterns  
 
-### Classification Layer
-- Basic feature model (~58% accuracy)
-- TF-IDF + Logistic Regression (~82% accuracy)
+### Representation Layer
+- TF-IDF + Logistic Regression  
+- Compared with basic feature model  
 
-### Structural Weight
-- PTI (Physical Threat Index)
+### Impact Layer
+- Physical Threat Index (PTI) as a proxy for real-world impact  
 
-## 4. Key Observations
-- Entertainment headlines show higher volatility (std ≈ 9.75) than environment (std ≈ 3.39).
-- Entertainment volume spikes concentrated around event-driven days (Feb 27 – Mar 1).
-- Environment headlines show more question-based framing (9% vs 5%).
-- TF-IDF model significantly outperformed basic feature model (82% vs 58% accuracy).
-- PTI scores were consistently higher for environment domain.
-- Attention volume and PTI do not appear proportionally aligned.
+---
 
-## 5. Next Direction
-Divergence Layer (Attention vs Impact)
+## Key Results
+
+- **Volatility:**  
+  Entertainment shows higher variability (~9.75 vs ~3.39)
+
+- **Burstiness:**  
+  ~2× higher in entertainment (~1.07 vs ~0.50)
+
+- **Model Performance:**  
+  TF-IDF model outperformed basic features (82% vs 58%)
+
+- **Impact (PTI):**  
+  Environment carries higher real-world threat signals  
+
+- **Mismatch:**  
+  Attention volume does not align proportionally with impact  
+
+---
+
+## Insight
+
+Attention is not proportional to impact.
+
+High-impact domains remain relatively stable,  
+while lower-impact domains dominate attention spikes.
+
+---
+
+## Structure
+
+- `notebooks/liminal_analysis.ipynb` — main analysis  
+
+---
+
+## Status
+
+Ongoing exploratory project.
+
+Current results indicate a measurable attention–impact gap,  
+but the system is still evolving — including dataset expansion,  
+refinement of impact metrics, and deeper validation.
+
